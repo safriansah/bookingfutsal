@@ -1,0 +1,27 @@
+RewriteEngine On
+
+RewriteRule ^berita$ index.php?pg=berita
+RewriteRule ^berita-([0-9]+)$ index.php?pg=lihat&&q=$1
+
+RewriteRule ^booking$ index.php?pg=booking
+
+RewriteRule ^main$ index.php
+
+RewriteRule ^adm/login$ adm/assets/pg/login/index.php
+
+RewriteRule ^adm/main$ adm/index.php
+
+RewriteRule ^adm/berita$ adm/index.php?pg=berita
+RewriteRule ^adm/berita-([a-zA-Z0-9]+)$ adm/index.php?pg=berita&&act=$1
+RewriteRule ^adm/berita-mes-([a-zA-Z0-9]+)$ adm/index.php?pg=berita&&mes=$1
+RewriteRule ^adm/berita-upd-([a-zA-Z0-9]+)$ adm/index.php?pg=berita&&act=upd&&kode=$1
+
+RewriteRule ^adm/admin$ adm/index.php?pg=admin
+RewriteRule ^adm/admin-([a-zA-Z0-9]+)$ adm/index.php?pg=admin&&act=$1
+RewriteRule ^adm/admin-mes-([a-zA-Z0-9]+)$ adm/index.php?pg=admin&&mes=$1
+RewriteRule ^adm/admin-upd-([a-zA-Z0-9]+)$ adm/index.php?pg=admin&&act=upd&&kode=$1
+RewriteRule ^adm/admin-upd-([a-zA-Z0-9]+)-mes-([a-zA-Z0-9]+)$ adm/index.php?pg=admin&&act=upd&&kode=$1&&mes=$2
+
+RewriteRule ^adm/booking$ adm/index.php?pg=booking
+RewriteRule ^adm/booking-mes-([a-zA-Z0-9]+)$ adm/index.php?pg=booking&&mes=$1
+RewriteRule ^adm/booking-upd-([a-zA-Z0-9]+)$ adm/index.php?pg=booking&&act=upd&&kode=$1
